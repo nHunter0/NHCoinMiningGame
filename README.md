@@ -4,8 +4,7 @@
 
 Welcome to the NHCoin Mining Game! This project is a fun, interactive game that combines the addictive nature of clicker games with the concept of mining cryptocurrency using a simple blockchain. Players can mine NHCoin by clicking a button, sell the mined coins for gems, and purchase helpers to automate the mining process.
 
-## Try It Now!
-[Play NHCoin Mining Game](https://nhunter0.github.io/NHCoinMiningGame/)
+Try It Now! at:  [Play NHCoin Mining Game](https://nhunter0.github.io/NHCoinMiningGame/)
 
 ## Features
 
