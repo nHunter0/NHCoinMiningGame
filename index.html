@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NHCoin Mining Game</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-dark text-white">
+    <div class="container text-center">
+        <h1 class="my-4">NHCoin Mining Game</h1>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="graph-section mb-4">
+                    <canvas id="coinValueChart" width="300" height="200"></canvas>
+                    <h3>Coin Price: <span id="current-price">0.0</span> <span id="price-arrow"></span></h3>
+                    <button id="sell-all-btn" class="btn btn-secondary mt-2" onclick="sellAllCoins()">Sell All Coins</button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="stats my-2">
+                    <p>Clicks left to next coin: <span id="clicks-left">100</span></p>
+                    <p>Coins Mined: <span id="coins-count">0</span></p>
+                </div>
+                <div class="mine-section my-4 position-relative">
+                    <button id="mine-btn" class="btn btn-primary mine-btn" onclick="onClick()">Mine NHCoin</button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="shop-panel bg-secondary p-3 rounded">
+                    <h2 class="text-left">SHOP</h2>
+                    <h6 class="text-left">Quantity of 💎: <span id="gems-count">0</span></h6>
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Clicks/s</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><button id="buy-helper-btn" class="btn btn-secondary" onclick="buyHelper()">Buy🤖</button></td>
+                                <td>1</td>
+                                <td><span id="helper-count">0</span></td>
+                                <td>3💎</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12">
+                <div id="helpers" class="my-2"></div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12">
+                <h3>Current Coins</h3>
+                <div class="table-responsive">
+                    <table id="blockchain-table" class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                                <th class="fixed-col">Action</th>
+                                <th>Block Index</th>
+                                <th>Timestamp</th>
+                                <th>Transactions</th>
+                                <th>Proof</th>
+                                <th>Previous Hash</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="blockchain.js"></script>
+    <script src="game.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
