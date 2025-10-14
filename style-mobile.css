@@ -1,0 +1,447 @@
+/* Mobile-specific styles. Put together quickly needs improvments.
+   May even need to cut down the game for best mobile support. To much UI ! 
+*/
+
+@media (max-width: 768px) {
+  /* prevent text selection and highlighting on mobile */
+  * {
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  body {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    -webkit-touch-callout: none !important;
+  }
+
+  /* allow selection in input fields and text areas */
+  input,
+  textarea {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+  }
+
+  /* header adjustments */
+  h1 {
+    font-size: 1.5rem !important;
+    margin: 1rem 0 !important;
+  }
+
+  .info-button {
+    font-size: 1.2rem !important;
+    padding: 4px 8px !important;
+  }
+
+  /* mining visualization - more compact on mobile */
+  .mining-visualization-container {
+    padding: 12px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .mining-header {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  .mining-stat {
+    flex: 0 0 48% !important;
+    min-width: 120px !important;
+    padding: 8px !important;
+  }
+
+  .stat-label {
+    font-size: 0.7rem !important;
+  }
+
+  .stat-value {
+    font-size: 1rem !important;
+  }
+
+  /* hash display */
+  .hash-display-container {
+    margin-top: 12px !important;
+  }
+
+  .hash-display-label {
+    font-size: 0.8rem !important;
+    margin-bottom: 6px !important;
+  }
+
+  .hash-display {
+    font-size: 0.65rem !important;
+    padding: 8px !important;
+    word-break: break-all !important;
+    line-height: 1.3 !important;
+  }
+
+  /* blockchain compact visualization */
+  .blockchain-container-compact {
+    padding: 10px 5px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .block-card-compact {
+    min-width: 60px !important;
+    width: 60px !important;
+    height: 60px !important;
+    margin: 0 4px !important;
+  }
+
+  .block-number-compact {
+    font-size: 1rem !important;
+  }
+
+  .block-label-compact {
+    font-size: 0.6rem !important;
+  }
+
+  /* coin value chart section */
+  .graph-section {
+    padding: 10px !important;
+  }
+
+  .graph-section h3 {
+    font-size: 1.2rem !important;
+    margin-top: 10px !important;
+  }
+
+  #coinValueChart {
+    max-height: 150px !important;
+  }
+
+  /* stats section */
+  .stats-compact {
+    padding: 10px !important;
+    margin: 10px 0 !important;
+  }
+
+  .stat-inline {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 8px 0 !important;
+  }
+
+  .stat-label-inline {
+    font-size: 0.85rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .stat-value-inline {
+    font-size: 1.1rem !important;
+  }
+
+  /* mine button - larger for easier tapping */
+  .mine-btn {
+    font-size: 1.3rem !important;
+    padding: 15px 30px !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+  }
+
+  .mine-animation {
+    font-size: 2rem !important;
+  }
+
+  /* shop panel */
+  .shop-panel {
+    padding: 12px !important;
+  }
+
+  .shop-panel h2 {
+    font-size: 1.3rem !important;
+  }
+
+  .shop-panel h6 {
+    font-size: 0.9rem !important;
+  }
+
+  .shop-panel table {
+    font-size: 0.75rem !important;
+  }
+
+  .shop-panel th,
+  .shop-panel td {
+    padding: 6px 4px !important;
+  }
+
+  .shop-panel button {
+    font-size: 0.8rem !important;
+    padding: 4px 8px !important;
+  }
+
+  /* helpers display */
+  #helpers {
+    margin: 10px 0 !important;
+  }
+
+  .helper {
+    font-size: 1.5rem !important;
+    margin: 0 3px !important;
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  /* wallet container */
+  .wallet-container {
+    padding: 12px !important;
+    margin-top: 15px !important;
+  }
+
+  .wallet-header {
+    padding: 12px !important;
+  }
+
+  .wallet-title {
+    font-size: 1.3rem !important;
+  }
+
+  .wallet-subtitle {
+    font-size: 0.8rem !important;
+  }
+
+  .wallet-table {
+    font-size: 0.7rem !important;
+  }
+
+  .wallet-table th,
+  .wallet-table td {
+    padding: 8px 4px !important;
+  }
+
+  .wallet-table th {
+    white-space: nowrap !important;
+  }
+
+  /* make table scrollable horizontally */
+  .table-responsive {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* block modal - adjusted for mobile */
+  .block-modal-content {
+    width: 95vw !important;
+    max-width: 95vw !important;
+    max-height: 85vh !important;
+    padding: 15px !important;
+    margin: 20px auto !important;
+    overflow-y: auto !important;
+  }
+
+  .block-modal-header {
+    font-size: 1.2rem !important;
+    padding: 10px !important;
+  }
+
+  .block-detail-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 8px 0 !important;
+  }
+
+  .block-detail-label {
+    font-size: 0.75rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .block-detail-value {
+    font-size: 0.7rem !important;
+    word-break: break-all !important;
+  }
+
+  .block-fun-fact {
+    font-size: 0.75rem !important;
+    padding: 10px !important;
+  }
+
+  /* info modal - adjusted for mobile */
+  .info-modal-content {
+    width: 95vw !important;
+    max-width: 95vw !important;
+    max-height: 85vh !important;
+    padding: 15px !important;
+    margin: 20px auto !important;
+    overflow-y: auto !important;
+  }
+
+  .info-modal-header {
+    font-size: 1.3rem !important;
+    padding: 12px !important;
+  }
+
+  .info-section {
+    padding: 12px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .info-section-title {
+    font-size: 1rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .info-section-text {
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .info-section-list {
+    font-size: 0.8rem !important;
+    padding-left: 20px !important;
+  }
+
+  .info-section-list li {
+    margin-bottom: 8px !important;
+  }
+
+  .info-modal-close {
+    font-size: 1rem !important;
+    padding: 10px 20px !important;
+  }
+
+  /* blockchain fact popup */
+  .blockchain-fact-popup {
+    width: 90vw !important;
+    max-width: 90vw !important;
+    padding: 15px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    right: auto !important;
+  }
+
+  .fact-title {
+    font-size: 1rem !important;
+  }
+
+  .fact-text {
+    font-size: 0.85rem !important;
+  }
+
+  .fact-close-button {
+    font-size: 1.5rem !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  /* powerup notifications */
+  .powerup-notification {
+    font-size: 0.9rem !important;
+    padding: 12px 20px !important;
+    max-width: 90vw !important;
+  }
+
+  /* powerups */
+  .powerup {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 2rem !important;
+  }
+
+  /* cursor CPS indicator */
+  .cursor-cps {
+    font-size: 0.9rem !important;
+    padding: 6px 12px !important;
+  }
+
+  /* bootstrap column adjustments */
+  .col-lg-4,
+  .col-md-6 {
+    margin-bottom: 20px !important;
+  }
+
+  /* sell button */
+  #sell-all-btn {
+    width: 100% !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* make sure buttons are easily tappable */
+  button {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+  }
+
+  .btn-secondary {
+    padding: 8px 12px !important;
+  }
+
+  /* reduce spacing on mobile */
+  .row {
+    margin-left: -10px !important;
+    margin-right: -10px !important;
+  }
+
+  .col-12,
+  .col-lg-4,
+  .col-md-6,
+  .col-sm-12 {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
+/* extra small devices (phones in portrait) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem !important;
+  }
+
+  .mining-stat {
+    flex: 0 0 100% !important;
+  }
+
+  .hash-display {
+    font-size: 0.55rem !important;
+  }
+
+  .mine-btn {
+    font-size: 1.1rem !important;
+    padding: 12px 24px !important;
+  }
+
+  .shop-panel table {
+    font-size: 0.65rem !important;
+  }
+
+  .wallet-table {
+    font-size: 0.6rem !important;
+  }
+
+  .block-modal-content,
+  .info-modal-content {
+    width: 98vw !important;
+    padding: 10px !important;
+  }
+}
+
+/* landscape orientation adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+  .mining-stat {
+    flex: 0 0 24% !important;
+  }
+
+  .block-modal-content,
+  .info-modal-content {
+    max-height: 70vh !important;
+  }
+}
