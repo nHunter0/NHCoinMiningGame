@@ -590,7 +590,7 @@ function initializeChart() {
 
 function updateBlockchainVisualization() {
   const container = document.getElementById("blockchain-visual-compact");
-  const recentBlocks = blockchain.chain.slice(-20);
+  const recentBlocks = blockchain.chain; // show all blocks
   const currentBlockCount = container.children.length;
 
   if (currentBlockCount === 0) {
