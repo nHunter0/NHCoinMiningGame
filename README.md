@@ -4,6 +4,8 @@
 
 Welcome to the NHCoin Mining Game! This project is a fun, interactive game that combines the addictive nature of clicker games with the concept of mining cryptocurrency using a simple blockchain. Players can mine NHCoin by clicking a button, sell the mined coins for gems, and purchase helpers to automate the mining process.
 
+![Game Interface](screenshot.png)
+
 Try It Now! at:  [Play NHCoin Mining Game](https://nhunter0.github.io/NHCoinMiningGame/)
 
 ## Features
@@ -149,10 +151,6 @@ Random power-ups spawn every 60 seconds:
 - **crypto.js:** Full Blake2s-256 cryptographic hash implementation (Zcash-style) with G mixing function, compression, and proper little-endian encoding.
 - **blockchain.js:** Core blockchain with genesis block creation, Merkle root calculation, difficulty adjustment, block rewards with halving, and frozen timestamp mining.
 - **game.js:** Game loop, onClick mining logic, smart display throttling, shop functions, powerup system, blockchain visualization, and educational popup facts.
-
-## Screenshots
-
-![Game Interface](screenshot.jpg)
 
 ## Educational Value
 
