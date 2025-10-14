@@ -29,6 +29,7 @@ let estimatedProofTarget = 100;
 let totalProofsAttempted = 0;
 let bestLeadingZeros = 0;
 let displayUpdateCounter = 0;
+let lastGreenFlashTime = 0;
 
 const blockchainFacts = [
   {
@@ -180,9 +181,12 @@ function onClick() {
       document.getElementById("attempts-display").textContent = totalProofsAttempted;
       document.getElementById("clicks-left").innerText = totalProofsAttempted;
 
+      // Debounce the green flash animation to prevent flickering at high CPS
       const hashDisplay = document.getElementById("current-hash-display");
-      if (leadingZeros > 0) {
+      const now = Date.now();
+      if (leadingZeros > 0 && (now - lastGreenFlashTime) > 200) {
         hashDisplay.classList.add("hash-success");
+        lastGreenFlashTime = now;
         setTimeout(() => hashDisplay.classList.remove("hash-success"), 500);
       }
     }
